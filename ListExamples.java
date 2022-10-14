@@ -10,9 +10,11 @@ class ListExamples {
   // the same order they appeared in the input list;
   static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
+    int index = 0;
     for(String s: list) {
       if(sc.checkString(s)) {
-        result.add(0, s);
+        result.add(index, s); 
+        index++;
       }
     }
     return result;

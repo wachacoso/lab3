@@ -30,8 +30,10 @@ public class ArrayExamples {
       if(num < lowest) { lowest = num; }
     }
     double sum = 0;
+    boolean lowestUsed = false;
     for(double num: arr) {
-      if(num != lowest) { sum += num; }
+      if(num == lowest && lowestUsed == false) {lowestUsed = true;} 
+      else {sum += num;}
     }
     return sum / (arr.length - 1);
   }

@@ -30,4 +30,10 @@ public class ArrayTests {
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(expected, input1);
   }
+  @Test
+  public void testAverageWOLowestTwoLowest() {
+    double[] input1 = {1, 1, 5, 6, 3, 9};
+    double result = ArrayExamples.averageWithoutLowest(input1);
+    assertEquals(4.8, result, 0.001);
+  }
 }
